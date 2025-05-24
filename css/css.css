@@ -1,0 +1,595 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "WDXL Lubrifont TC", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+body {
+  overflow-x: hidden;
+  color: rgba(0, 0, 0, 0.767);
+}
+
+a {
+  color: rgba(255, 255, 255, 0.683);
+}
+
+/* Barra de Navegacion */
+
+.barra-de-navegacion {
+  width: 100%;
+  background-color: white;
+  display: flex;
+  height: 70px;
+  border-bottom: 5px solid rgba(0, 0, 0, 0.767);
+  position: sticky;
+  z-index: 50;
+  top: 0;
+}
+
+.logo {
+  width: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+}
+
+.busqueda {
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.barra-de-busqueda {
+  width: 90%;
+  background-color: rgba(0, 0, 0, 0.368);
+  height: 30px;
+  padding-left: 20px;
+  font-size: 16px;
+  border: none;
+  transition: 0.5s;
+}
+
+.barra-de-busqueda:focus {
+  outline: none;
+  transform: scale(1.02);
+}
+
+.material-symbols-outlined {
+  display: flex !important;
+  width: 50px;
+  height: 30px;
+  border-radius: 20px;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.368);
+  height: 30px;
+}
+
+.botones {
+  display: flex;
+  width: 30%;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.links {
+  padding: 5px 10px;
+  background-color: rgba(0, 0, 0, 0.368);
+  transition: 0.5s;
+}
+
+.links:hover {
+  transform: scale(1.1);
+  background-color: black;
+  color: white;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+/* Presentacion */
+
+.presentacion {
+  width: 100%;
+  height: 500px;
+}
+
+.presentacion-img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  object-position: 0% 20%;
+  transition: 1s;
+  z-index: 1;
+}
+
+.presentacion-img:hover {
+  transform: scale(1.05);
+}
+
+/* Seccion Banner */
+
+.banner {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 100px);
+  grid-gap: 10px;
+  margin-bottom: 30px;
+  background: rgb(255, 255, 255);
+  padding-top: 30px;
+  z-index: 2;
+  position: relative;
+}
+
+.banner-1 {
+  grid-column: 1/2;
+  grid-row: 1/4;
+  position: relative;
+  transition: 0.5s;
+  filter: grayscale(60%);
+}
+
+.secciones-principal {
+  position: absolute;
+  top: 45%;
+  left: 35%;
+  z-index: 1;
+  background-color: black;
+  border: 2px solid rgba(255, 255, 255, 0.692);
+  padding: 5px 10px;
+}
+
+.secciones-principal h1 {
+  color: rgba(255, 255, 255, 0.881);
+}
+
+.banner-1:hover {
+  transform: scale(1.02);
+  filter: grayscale(0%);
+}
+
+.banner-2 {
+  grid-column: 2/3;
+  grid-row: 1/4;
+  transition: 0.5s;
+  filter: grayscale(60%);
+}
+
+.banner-2:hover {
+  transform: scale(1.02);
+  filter: grayscale(0%);
+}
+
+.banner-3 {
+  grid-column: 3/4;
+  grid-row: 1/4;
+  transition: 0.5s;
+  filter: grayscale(60%);
+}
+
+.banner-3:hover {
+  transform: scale(1.02);
+  filter: grayscale(0%);
+}
+
+.banner-4 {
+  grid-column: 4/5;
+  grid-row: 1/4;
+  transition: 0.5s;
+  filter: grayscale(60%);
+}
+
+.banner-4:hover {
+  transform: scale(1.02);
+  filter: grayscale(0%);
+}
+
+.banner-1-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Seccion Promos */
+
+.contenedor-promos {
+  width: 100%;
+}
+
+.promos {
+  width: 90%;
+  height: 300px;
+  position: relative;
+  margin: auto;
+  background-color: white;
+}
+
+.promos img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  object-position: 0% 0%;
+  transition: 1s;
+}
+
+.promos img:hover {
+  transform: scaleY(1.5);
+  object-fit: cover;
+}
+
+.promos-text {
+  top: 45%;
+  left: 30%;
+  padding: 5px 10px;
+  position: absolute;
+  background-color: black;
+}
+
+.promos-text h1 {
+  color: white;
+}
+
+/* Seccion Pantalones */
+
+.seccion-1 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  background: white;
+  z-index: 1;
+  position: relative;
+}
+
+.titulo-principal {
+  width: 50%;
+  margin: auto;
+  padding: 5px 10px;
+  background-color: rgb(0, 0, 0);
+  color: white;
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+.titulo-principal h1 {
+  color: white;
+}
+
+.Pantalones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  width: 90%;
+  margin: auto;
+  margin-top: 20px;
+  padding-bottom: 40px;
+  background: white;
+}
+
+.articulos-pantalones {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 250px;
+  gap: 10px;
+  padding-bottom: 20px;
+  background: #f4f4f4;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.articulo-titulo {
+  padding: 5px 10px;
+  text-align: center;
+}
+
+.articulo-precio {
+  text-align: center;
+}
+
+.articulo-precio-sin-impuestos {
+  text-align: center;
+}
+
+.articulo-boton {
+  text-align: center;
+}
+
+.btn-comprar {
+  width: 80%;
+  border: 2px solid black;
+  padding: 5px 10px;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.btn-comprar:hover {
+  background-color: black;
+  color: white;
+  transform: scale(1.1);
+}
+
+.articulo-img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  transition: 0.5s;
+}
+
+.articulo-img:hover {
+  transform: scale(1.03);
+}
+
+/* Final de la pagina */
+
+.final {
+  width: 100%;
+  display: flex;
+  height: 250px;
+  background-color: rgb(18, 18, 18);
+}
+
+/* Formulario */
+
+.formulario-contenedor {
+  width: 40%;
+  text-align: center;
+  padding-top: 40px;
+}
+
+.formulario-contenedor h2 {
+  color: rgb(228, 228, 228);
+}
+
+.formulario {
+  width: 65%;
+  display: flex;
+  margin: auto;
+  gap: 20px;
+  justify-content: center;
+  align-items: start;
+  padding-top: 15px;
+}
+
+.input-form {
+  width: 250px;
+  padding: 8px 14px;
+  border: 0px;
+  background-color: rgb(255, 255, 255);
+  color: black;
+  transition: 0.5s;
+}
+
+.input-form:focus {
+  transform: scale(1.1);
+  outline: none;
+}
+
+.btn-formulario {
+  width: 100px;
+  padding: 8px 14px;
+  border: 0px;
+  background-color: rgba(255, 0, 0, 0.555);
+  color: rgb(255, 255, 255);
+  transition: 0.5s;
+}
+
+.btn-formulario:hover {
+  background-color: rgb(255, 0, 0);
+  transform: scale(1.2);
+}
+
+/* Footer links */
+
+.links-contenedor {
+  width: 60%;
+  display: flex;
+  gap: 40px;
+  padding-top: 40px;
+  justify-content: center;
+}
+
+.footer-seccion {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  color: rgb(255 255 255 / 95%);
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 20px;
+}
+
+.footer-links a {
+  transition: 0.5s;
+}
+
+.footer-links a:hover {
+  transform: scale(1.2);
+  background-color: white;
+  color: black;
+}
+
+@media (max-width: 450px) {
+  .logo {
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+  }
+
+  .links {
+    padding: 2px 5px;
+    background-color: rgba(0, 0, 0, 0.368);
+    transition: 0.5s;
+  }
+
+  .botones {
+    display: flex;
+    width: 70%;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    padding-top: 4px;
+  }
+
+  .busqueda {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    display: NONE;
+  }
+
+  .presentacion {
+    width: 100%;
+    height: 250px;
+  }
+
+  .presentacion-img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    object-position: 47% 20%;
+    transition: 1s;
+    z-index: 1;
+  }
+
+  .promos-text {
+    top: 45%;
+    left: 30%;
+    padding: 5px 10px;
+    position: absolute;
+    background-color: black;
+    display: none;
+  }
+
+  .Pantalones {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    width: 90%;
+    margin: auto;
+    margin-top: 20px;
+    padding-bottom: 15px;
+    background: white;
+  }
+
+  .banner {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 100px);
+    grid-gap: 10px;
+    margin-bottom: 10px;
+    background: rgb(255, 255, 255);
+    padding-top: 30px;
+    z-index: 2;
+    position: relative;
+  }
+
+  .banner-1 {
+    grid-column: 1/2;
+    grid-row: 1/3;
+  }
+
+  .banner-1 .secciones-principal {
+    position: absolute;
+    top: 45%;
+    left: 19%;
+    z-index: 1;
+    background-color: black;
+    border: 2px solid rgba(255, 255, 255, 0.692);
+    padding: 5px 10px;
+  }
+
+  .banner-2 .secciones-principal {
+    position: absolute;
+    top: 45%;
+    left: 30%;
+    z-index: 1;
+    background-color: black;
+    border: 2px solid rgba(255, 255, 255, 0.692);
+    padding: 5px 10px;
+  }
+
+  .banner-2 {
+    grid-column: 2/3;
+    grid-row: 1/3;
+  }
+
+  .banner-3 {
+    grid-column: 1/2;
+    grid-row: 3/5;
+  }
+
+  .banner-4 {
+    grid-column: 2/3;
+    grid-row: 3/5;
+  }
+
+  .articulo-img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    transition: 0.5s;
+  }
+
+  .articulos-pantalones {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 175px;
+    gap: 10px;
+    padding-bottom: 20px;
+    background: #f4f4f4;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+  }
+
+  .final {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+  }
+
+  .formulario-contenedor {
+    width: 100%;
+    text-align: center;
+    padding-top: 40px;
+  }
+
+  .footer-seccion {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    color: rgb(255 255 255 / 95%);
+    text-align: center;
+  }
+
+  .links-contenedor {
+    width: 100%;
+    display: flex;
+    gap: 40px;
+    padding-top: 40px;
+    justify-content: center;
+    flex-direction: column;
+  }
+}
