@@ -8,6 +8,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=menu"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=menu"
+    />
+    <link
       href="https://fonts.googleapis.com/css2?family=WDXL+Lubrifont+TC&display=swap"
       rel="stylesheet"
     />
@@ -33,6 +41,32 @@
         <a class="links" href="#remeras">Remeras</a>
         <a class="links" href="#buzos">Buzos</a>
         <a class="links" href="#shorts">Shorts</a>
+      </div>
+    </nav>
+
+    <nav class="barra-de-celular">
+      <div class="links-1">
+        <img
+          width="45px"
+          id="btn-menu"
+          src="img/menu_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg"
+          alt="Menu hamburguesa"
+        />
+      </div>
+
+      <div class="logo">
+        <h1>Valle Vintage</h1>
+      </div>
+
+      <div class="busqueda" id="search-container">
+        <span id="btn-search" class="material-symbols-outlined"> search </span>
+      </div>
+
+      <div class="menu-categorias" id="menu-categorias">
+        <a href="#pantalones">Pantalones</a>
+        <a href="#remeras">Remeras</a>
+        <a href="#buzos">Buzos</a>
+        <a href="#shorts">Shorts</a>
       </div>
     </nav>
 
@@ -803,4 +837,37 @@
       </div>
     </footer>
   </body>
+
+  <script>
+    const btnMenu = document.getElementById("btn-menu");
+    const menuCategorias = document.getElementById("menu-categorias");
+    const searchContainer = document.getElementById("search-container");
+    const btnSearch = document.getElementById("btn-search");
+
+    // al clickear hamburguesa
+    btnMenu.addEventListener("click", () => {
+      menuCategorias.classList.toggle("show");
+      // si el menú se abre, cierro búsqueda
+      searchContainer.classList.remove("active");
+    });
+
+    // al clickear lupa
+    btnSearch.addEventListener("click", () => {
+      searchContainer.classList.toggle("active");
+      // si la búsqueda se abre, cierro menú
+      menuCategorias.classList.remove("show");
+      // y enfoco el input
+      if (searchContainer.classList.contains("active")) {
+        document.getElementById("search-input").focus();
+      }
+    });
+
+    // opcional: cerrar ambos al clicar fuera
+    document.addEventListener("click", (e) => {
+      if (!e.target.closest(".barra-de-celular")) {
+        menuCategorias.classList.remove("show");
+        searchContainer.classList.remove("active");
+      }
+    });
+  </script>
 </html>
