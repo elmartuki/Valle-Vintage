@@ -29,6 +29,10 @@ a {
   top: 0;
 }
 
+.barra-de-celular {
+  display: none;
+}
+
 .logo {
   width: 20%;
   display: flex;
